@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      border-left: 1px solid #ccc;
+      border-right: 1px solid #ccc;
+    }
+
+    .content {
+      width: 100%;
+      max-width: 800px;
+      padding: 20px;
+    }
+
+    nav, main, footer {
+      width: 100%;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style-type: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin: 0 10px;
+    }
+
+    main {
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <nav>
+        <a id="logo" href="#">
+          <img src="./arquivos/Logo-top.svg" alt="front.end">
+        </a>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Grade</a></li>
+          <li><a href="#">Matricula</a></li>
+        </ul>
+      </nav>
+      <main>
+        <section class="text">
+          <h1>Curso de <span>HTML/CSS</span> como você nunca viu!</h1>
+          <p>
+            Nós criamos conteúdos
+            <strong>exclusivos e únicos para você</strong>.
+            <br>
+            Invista no seu conhecimento e
+            <strong>se destaque diante a concorrência</strong>.
+          </p>
+          <button>
+            <img src="./arquivos/whats.svg" alt="icone do whatsapp">
+            Comece já
+          </button>
+        </section>
+        <img src="./arquivos/illustration.svg" alt="ilustração de programador">
+      </main>
+      <footer>
+        fale conosco no instagram
+        <a href="https://www.instagram.com/in100tiva/" target="_blank">@in100tiva</a>
+      </footer>
+      <div class="page">
+        <button id="openMenuBtn">Oferta Especial</button>
+        <div id="backdrop" class="backdrop"></div>
+        <div id="menu" class="menu">
+          <button id="closeMenuBtn" class="close-btn">X</button>
+          <h3>Veja a nossa oferta especial</h3>
+          <p>Alunos inscritos até o final do mês terão 50% de desconto, entre em contato pela central de atendimento e informe o código [KJ77DH]</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const openMenuBtn = document.getElementById('openMenuBtn');
+    const closeMenuBtn = document.getElementById('closeMenuBtn');
+    const backdrop = document.getElementById('backdrop');
+    const menu = document.getElementById('menu');
+
+    function openMenu() {
+      backdrop.style.display = 'block';
+      menu.style.display = 'block';
+    }
+
+    function closeMenu() {
+      menu.style.display = 'none';
+      backdrop.style.display = 'none';
+    }
+
+    openMenuBtn.addEventListener('click', openMenu);
+    closeMenuBtn.addEventListener('click', closeMenu);
+  </script>
+  <img id="in100tiva" src="./arquivos/logo-low.svg" alt="Logo do projeto in100tiva">
+</body>
+</html>
